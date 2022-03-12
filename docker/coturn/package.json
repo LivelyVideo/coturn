@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "lively": "npm run lively:build && npm run lively:push",
+    "lively:build": "make VERSION=4.5.2-prom-fix image",
+    "lively:push": "docker push gcr.io/lively-video/coturn:4.5.2-prom-fix"
+  },
   "devDependencies": {
     "bats": "^1.1"
   }

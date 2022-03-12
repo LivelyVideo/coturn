@@ -106,7 +106,8 @@ endef
 
 # Pre-build cache for Docker image builds.
 #
-# WARNING: This command doesn't apply tag to the built Docker image, just
+# WARNING: This command doesn't apply tag to t
+# e built Docker image, just
 #          creates a build cache. To produce a Docker image with a tag, use
 #          `docker.tag` command right after running this one.
 #
@@ -137,7 +138,7 @@ docker.build.cache:
 
 docker.image:
 	$(call docker.buildx,$(DOCKERFILE),\
-		coturn,\
+		gcr.io/lively-video,\
 		$(or $(tag),$(VERSION)),\
 		$(ref),\
 		$(or $(platform),$(MAIN_PLATFORM)),\
